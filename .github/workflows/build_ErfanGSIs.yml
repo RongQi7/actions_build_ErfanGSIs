@@ -50,6 +50,7 @@ jobs:
        - name: Download Stock Rom & Generate GSI
          run: |
               ls
+              cd ErfanGSIs
               sudo bash ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
        
        - name: Zip GSI  
