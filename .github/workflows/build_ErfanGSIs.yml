@@ -46,6 +46,7 @@ jobs:
               mkdir ./output
               sudo bash ./setup.sh
               ls -al
+              cat ./url2GSI.sh
        
        - name: Download Stock Rom & Generate GSI
          run: sudo bash ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
