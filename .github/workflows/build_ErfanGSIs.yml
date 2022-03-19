@@ -45,9 +45,10 @@ jobs:
               cd $GITHUB_WORKSPACE/ErfanGSIs
               mkdir ./output
               sudo bash ./setup.sh
+              sudo chmod +x url2GSI.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
+         run: sudo bash ./url2GSI.sh -c --$BUILD_TYPE $ROM_URL $ROM_NAME
        
        - name: Zip GSI  
          run: |
